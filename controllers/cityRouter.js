@@ -5,6 +5,10 @@ const {  getParksFromDB, getParkFromDB, postParksToDB } = require('../lib/supaba
 
 // pull from supabase
 // if not in supabase, request api, then add to supabase
+cityRouter.get('/', (req, res) => {
+  res.send('Hello')
+})
+
 cityRouter.get('/:state/:city/parks', async (req, res) => {
   const state = req.params.state, city = req.params.city
   console.log(city)
