@@ -4,7 +4,15 @@ const cors = require('cors');
 require('dotenv').config();
 const cityRouter = require('./controllers/cityRouter');
 app.use(express.json());
-app.use(cors());
+const corsOptions = [
+  cors({
+    origin: 'http://localhost:5173',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  })
+];
+app.use(corsOptions);
 
 app.get('/', (_, res) => res.redirect('/api'));
 app.use('/api', cityRouter)
