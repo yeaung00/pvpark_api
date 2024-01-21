@@ -6,7 +6,7 @@ const cityRouter = require('./controllers/cityRouter');
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (_, res) => res.redirect('/api'));
+app.get('/', (_, res) => res.redirect('/api/ca/santa cruz/parks'));
 app.use('/api', cityRouter)
 
 app.listen(3001, () => console.log('listening on port http://localhost:3001'))
