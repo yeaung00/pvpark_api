@@ -7,7 +7,7 @@ const userRouter = require('./controllers/userRouter');
 app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 const corsOptions = cors({
-    origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+    origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://pvpark-frontend.vercel.app/'],
     methods: '*',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
